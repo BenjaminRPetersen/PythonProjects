@@ -21,6 +21,11 @@ provided by Oracle here: https://docs.oracle.com/en/cloud/saas/marketing/eloqua-
 Importing data through the Eloqua BULK API will require that you create an import definition for your custom object and for the contact object. The reason behind importing
 contacts and custom object data separately is because Eloqua needs to be able to map to contacts from the custom object. (Note: Please don't try using the REST API for this 
 process since Eloqua won't map to contacts. I made this mistake early on.) Please refer to the documentation provided by Oracle here: https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-bulk-2.0-customobjects-parentid-imports-post.html
+The uri will be different for the Eloqua sandbox and the production environment. If you run the import definition files that are provided they will be custom to your Eloqua
+environment. These will need to be changed when working with either production or the sandbox.
+
+# Custom Object ID
+The custom object ID will need to be pulled through the Eloqua API and referenced throughout your code. In this case the custom object id in the sandbox environment was 58, however will change based on your environment. Please pull the custom objects after you have created yours. Please refer to the Oracle documentation here: https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/api-application-2.0-custom-objects.html
 
 # Beta.Sam API Pull
 Pulling data through Beta.Sam is limited in the fact that you are only able to pull 1,000 records in a single API request. In order to get around this the data was separated by
